@@ -1,3 +1,3 @@
 # SuperLightNet
 
-## Model path: classification_ModelNet40/models/SLNet
+## Model path: classification_ModelNet40/models/SLNet.py
