@@ -70,7 +70,7 @@ class Embedding(nn.Module):
         if mode == 'mlp':
             self.embd = mlp(in_ch, out_ch)
         elif mode == 'gpe':
-            self.embd = mlp(in_ch, out_ch, sigma)
+            self.embd = GPE(in_ch, out_ch, sigma)
 
     def forward(self, x):
         return self.embd(x)
