@@ -1,0 +1,1 @@
+python main.py --batch_size 50 --model SLNet_edge0_fps
