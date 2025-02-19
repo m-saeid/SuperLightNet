@@ -126,17 +126,19 @@ class Decoder(nn.Module):
         return x
 
 
-def SLNet(num_cls=50, **kwargs) -> Decoder:
-   return Decoder(num_cls=num_cls, points=2048, embed_dim=16, groups=1, res_expansion=1.0,
-                activation="relu", bias=True, use_xyz=True, normalize="anchor",
-                dim_expansion=[2, 2, 2, 1], pre_blocks=[1, 1, 2, 1], pos_blocks=[1, 1, 2, 1],
-                k_neighbors=[32, 32, 32, 32], reducers=[4, 4, 4, 4], # [2,2,2,2]
-                de_dims=[512, 256, 128, 128], de_blocks=[4,4,4,4],
-                gmp_dim=64,cls_dim=64, k_attention=[24,24,24,8], **kwargs)
 
 
+'''
 if False:#__name__ == '__main__':
 
+    def SLNet(num_cls=50, **kwargs) -> Decoder:
+        return Decoder(num_cls=num_cls, points=2048, embed_dim=16, groups=1, res_expansion=1.0,
+                    activation="relu", bias=True, use_xyz=True, normalize="anchor",
+                    dim_expansion=[2, 2, 2, 1], pre_blocks=[1, 1, 2, 1], pos_blocks=[1, 1, 2, 1],
+                    k_neighbors=[32, 32, 32, 32], reducers=[4, 4, 4, 4], # [2,2,2,2]
+                    de_dims=[512, 256, 128, 128], de_blocks=[4,4,4,4],
+                    gmp_dim=64,cls_dim=64, k_attention=[24,24,24,8], **kwargs)
+    
     def all_params(model):
         return sum(p.numel() for p in model.parameters())
     def trainable_params(model):
@@ -153,3 +155,5 @@ if False:#__name__ == '__main__':
     out_lite = model_lite(data, norm, cls_label)  # [2,2048,50]
     
     print(out_lite.shape)
+
+'''
