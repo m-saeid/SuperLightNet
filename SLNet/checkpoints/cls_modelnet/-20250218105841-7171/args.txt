@@ -1,0 +1,23 @@
+n:	 1024
+embed:	 [3, 16, 'gpe']
+embed_dim:	 16
+res_dim_ratio:	 0.25
+bias:	 False
+use_xyz:	 True
+norm_mode:	 anchor
+dim_ratio:	 [2, 2, 2, 1]
+num_blocks1:	 [1, 1, 2, 1]
+num_blocks2:	 [1, 1, 2, 1]
+k_neighbors:	 [24, 24, 24, 24]
+sampling_mode:	 ['fps', 'fps', 'fps', 'fps']
+sampling_ratio:	 [2, 2, 2, 2]
+checkpoint:	 checkpoints/cls_modelnet/-20250218105841-7171
+msg:	 None
+batch_size:	 256
+epoch:	 300
+learning_rate:	 0.1
+min_lr:	 0.005
+weight_decay:	 0.0002
+seed:	 7171
+workers:	 6
+model:	 cls_modelnet
