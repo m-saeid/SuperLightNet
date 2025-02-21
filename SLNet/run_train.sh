@@ -1,6 +1,6 @@
-#python cls_modelnet.py --embed mlp --batch_size 256 --epoch 1
+python cls_modelnet.py --embed mlp --batch_size 256 --epoch 1
 #python cls_scanobject.py --embed mlp --batch_size 256 --epoch 1
-python partseg_shapenet.py --embed mlp --batch_size 64 --epoch 1
+#python partseg_shapenet.py --embed mlp --batch_size 64 --epoch 1
 #python semseg_s3dis.py --embed mlp --batch_size 24 --epoch 1
 
 
