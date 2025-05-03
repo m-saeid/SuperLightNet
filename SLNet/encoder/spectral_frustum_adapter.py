@@ -4,7 +4,6 @@ import torch.nn.functional as F
 from torch.fft import fft, ifft
 import math
 
-# Paste your SpectralFrustumAdapter here
 class SpectralFrustumAdapter(nn.Module):
     def __init__(self, dim: int, bottleneck: int = 32, curve_bits: int = 10, dropout: float = 0.1):
         super().__init__()
